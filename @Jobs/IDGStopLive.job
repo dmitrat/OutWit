@@ -1,0 +1,5 @@
+~Disabling web camera live video~
+Job:IDGStopLive()
+{	
+	Camera.UEye.StopLive(ueye1);
+}

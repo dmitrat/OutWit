@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\OutWit.Common.Logging\OutWit.Common.Logging.csproj" />
+    <ProjectReference Include="..\..\Common\OutWit.Common.MEF\OutWit.Common.MEF.csproj" />
+    <ProjectReference Include="..\OutWit.Engine.Data\OutWit.Engine.Data.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,5 @@
+~Restoring initial state on IDG processing error~
+Job:EOTSetManualTrigger()
+{	
+	Camera.UEye.SetManualTrigger(ueye1, #GPIO#, #ManualConfiguration#);
+}

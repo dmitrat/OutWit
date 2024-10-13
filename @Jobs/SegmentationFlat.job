@@ -1,0 +1,63 @@
+~IDG Segmentation for flat items ~
+Job:SegmentationFlat(String:id)
+{
+	~Base folder~
+	String:baseFolder = "D:\Services\Temp\";
+	
+	~Variables~
+	Color:background; UEyeImage:callback;
+	
+	~Process~
+	Screen.Init(#ScreenId#);
+	IDG.Segmentation.Init(#WorkFolder#, "Mask\mask.png", "Mask\area.xml");
+
+	~Stage 1~
+	Camera.UEye.SetExposure(ueye1, #ExposureImage#);
+	
+	background = Screen.SwitchColor(0, 0, 0);
+	Camera.UEye.Snapshot(black);
+	callback = Camera.UEye.ScaleImage(black, "LIVE");
+	Return(callback);
+		
+	Camera.UEye.SetExposure(ueye1, #ExposureRgb#);
+		
+	background = Screen.SwitchColor(255, 0, 0);
+	Camera.UEye.Snapshot(red);
+	callback = Camera.UEye.ScaleImage(red, "LIVE");
+	Return(callback);
+		
+	background = Screen.SwitchColor(0, 255, 0);
+	Camera.UEye.Snapshot(green);
+	callback = Camera.UEye.ScaleImage(green, "LIVE");
+	Return(callback);
+		
+	background = Screen.SwitchColor(0, 0, 255);
+	Camera.UEye.Snapshot(blue);
+	callback = Camera.UEye.ScaleImage(blue, "LIVE");
+	Return(callback);
+		
+	IDG.Segmentation.Process(#WorkFolder#, id, "0", NULL, black, red, green, blue);	
+	
+	Pause("IDGRotateFlat");	
+	
+	~Stage 2~
+	Camera.UEye.SetExposure(ueye1, #ExposureImage#);
+	
+	background = Screen.SwitchColor(0, 0, 0);
+	Camera.UEye.Snapshot(black);
+	
+	Camera.UEye.SetExposure(ueye1, #ExposureRgb#);
+		
+	background = Screen.SwitchColor(255, 0, 0);
+	Camera.UEye.Snapshot(red);
+		
+	background = Screen.SwitchColor(0, 255, 0);
+	Camera.UEye.Snapshot(green);
+		
+	background = Screen.SwitchColor(0, 0, 255);
+	Camera.UEye.Snapshot(blue);
+		
+	IDG.Segmentation.Process(#WorkFolder#, id, "1", NULL, black, red, green, blue);	
+	
+	Screen.Dispose();
+}

@@ -1,0 +1,6 @@
+~Restoring initial state on IDG processing error~
+Job:Restore()
+{
+	Screen.Dispose();
+	Turntable.Restore();
+}

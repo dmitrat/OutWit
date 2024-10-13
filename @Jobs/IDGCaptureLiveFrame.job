@@ -1,0 +1,9 @@
+~Acquisition of last web camera live video frame~
+Job:IDGCaptureLiveFrame()
+{
+	Camera.UEye.GetLive(live);	
+	
+	UEyeImage:callback = Camera.UEye.ScaleImage(live, "LIVE");
+	Return(callback);
+	
+}

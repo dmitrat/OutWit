@@ -1,0 +1,12 @@
+~Session initialization for IDG~
+Job:InitOneUEyeCamera()
+{	
+	~Initializing camera with ID = 1~
+	Int:ueye1 = Camera.UEye.Init(1);
+	
+	~Allocating memory~
+	Image:black = Camera.UEye.Allocate(ueye1, "HXGA1"); ~HXGA1 = 4128x3096~
+	Image:red = Camera.UEye.Allocate(ueye1, "SXGA");    ~SXGA  = 1280x960~
+	Image:green = Camera.UEye.Allocate(ueye1, "SXGA");  ~SXGA  = 1280x960~
+	Image:blue = Camera.UEye.Allocate(ueye1, "SXGA");   ~SXGA  = 1280x960~
+}

@@ -1,0 +1,36 @@
+~IDG Calibration~
+Job:Calibration()
+{
+	~Variables~
+	Color:background; Double:degree; UEyeImage:callback;
+	
+	~Process~
+	Screen.Init(#ScreenId#);
+	IDG.Calibration.Init(4104, 3006);
+	Camera.UEye.SetExposure(ueye1, #ExposureRgb#);
+	
+	Loop(8)
+	{
+		background = Screen.SwitchColor(255, 0, 0);
+		Camera.UEye.Snapshot(red);
+		callback = Camera.UEye.ScaleImage(red, "LIVE");
+		Return(callback);
+		
+		background = Screen.SwitchColor(0, 255, 0);
+		Camera.UEye.Snapshot(green);
+		callback = Camera.UEye.ScaleImage(green, "LIVE");
+		Return(callback);
+		
+		background = Screen.SwitchColor(0, 0, 255);
+		Camera.UEye.Snapshot(blue);
+		callback = Camera.UEye.ScaleImage(blue, "LIVE");
+		Return(callback);
+		
+		IDG.Calibration.Process(red, green, blue);
+		
+		degree = Turntable.Rotate(45, "COM3");
+	}
+	
+	IDG.Calibration.End(#WorkFolder#, "Mask\mask.png", "Mask\area.xml");
+	Screen.Dispose();
+}

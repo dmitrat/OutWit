@@ -1,0 +1,95 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:bars="clr-namespace:OutWit.Common.Controls.Bars;assembly=OutWit.Common.Controls"
+                    xmlns:wnd="clr-namespace:OutWit.Common.Controls.Windows;assembly=OutWit.Common.Controls"
+                    xmlns:out="clr-namespace:OutWit.Common.Controls.Output;assembly=OutWit.Common.Controls"
+                    xmlns:menu="clr-namespace:OutWit.Common.Controls.Menu;assembly=OutWit.Common.Controls"
+                    xmlns:b="clr-namespace:OutWit.Common.Controls.Buttons;assembly=OutWit.Common.Controls"
+                    xmlns:system="clr-namespace:System;assembly=System.Runtime"
+                    xmlns:input="clr-namespace:OutWit.Common.Controls.Input;assembly=OutWit.Common.Controls"
+                    xmlns:converters1="clr-namespace:OutWit.Demo.Converters">
+
+    <converters1:StringToResourceConverter x:Key="StringToResource"/>
+
+    <system:Double x:Key="NavigationPanelHiddenWidth">15</system:Double>
+    <system:Double x:Key="NavigationPanelMinWidth">50</system:Double>
+    <system:Double x:Key="NavigationPanelMaxWidth">225</system:Double>
+
+    <Style TargetType="b:FlatButton" >
+        <Setter Property="TextConverter" Value="{StaticResource StringToResource}"/>
+    </Style>
+
+    <Style TargetType="out:TextOutput">
+        <Setter Property="TextConverter" Value="{StaticResource StringToResource}"/>
+    </Style>
+
+    <Style TargetType="menu:TextMenuItem" BasedOn="{StaticResource MaterialDesignMenuItem}">
+        <Setter Property="TextConverter" Value="{StaticResource StringToResource}"/>
+    </Style>
+
+    <Style TargetType="menu:PrismMenuItem" BasedOn="{StaticResource MaterialDesignMenuItem}">
+        <Setter Property="TextConverter" Value="{StaticResource StringToResource}"/>
+    </Style>
+
+    <Style TargetType="menu:ListMenuItem" BasedOn="{StaticResource MaterialDesignMenuItem}">
+        <Setter Property="TextConverter" Value="{StaticResource StringToResource}"/>
+    </Style>
+
+    <Style x:Key="MainWindowStyle" TargetType="wnd:HeaderWindow">
+        <Setter Property="Background" Value="{DynamicResource MaterialDesignPaper}"/>
+        <Setter Property="HeaderStyle" Value="{DynamicResource TitleBarStyle}"/>
+    </Style>
+
+    <Style TargetType="input:TextInput" >
+        <Setter Property="Margin" Value="0, 5, 0, 0"/>
+        <Setter Property="TextConverter" Value="{StaticResource StringToResource}"/>
+        <Setter Property="Foreground" Value="{DynamicResource PrimaryHueLightForegroundBrush}"/>
+        <Setter Property="FontFamily" Value="{DynamicResource InputFontFamily}"/>
+        <Setter Property="FontSize" Value="{DynamicResource InputFontSize}"/>
+    </Style>
+
+    <Style TargetType="input:EnumComboInput" >
+        <Setter Property="Margin" Value="0, 5, 0, 0"/>
+        <Setter Property="TextConverter" Value="{StaticResource StringToResource}"/>
+        <Setter Property="Foreground" Value="{DynamicResource PrimaryHueLightForegroundBrush}"/>
+        <Setter Property="FontFamily" Value="{DynamicResource InputFontFamily}"/>
+        <Setter Property="FontSize" Value="{DynamicResource InputFontSize}"/>
+    </Style>
+
+    <Style TargetType="input:BooleanInput" >
+        <Setter Property="Margin" Value="0, 5, 0, 0"/>
+        <Setter Property="TextConverter" Value="{StaticResource StringToResource}"/>
+        <Setter Property="Foreground" Value="{DynamicResource PrimaryHueLightForegroundBrush}"/>
+        <Setter Property="FontFamily" Value="{DynamicResource InputFontFamily}"/>
+        <Setter Property="FontSize" Value="{DynamicResource InputFontSize}"/>
+        <Setter Property="TrueTextKey" Value="On"/>
+        <Setter Property="FalseTextKey" Value="Off"/>
+    </Style>
+
+    <Style x:Key="TitleBarStyle" TargetType="bars:TitleBar">
+        <Setter Property="Background" Value="{DynamicResource PrimaryHueLightBrush}"/>
+        <Setter Property="Foreground" Value="{DynamicResource PrimaryHueLightForegroundBrush}"/>
+        <Setter Property="TextConverter" Value="{StaticResource StringToResource}"/>
+        <Setter Property="MinimizeTooltipKey" Value="HeaderMinimize"/>
+        <Setter Property="MaximizeTooltipKey" Value="HeaderMaximize"/>
+        <Setter Property="FullScreenTooltipKey" Value="HeaderEnterFullScreen"/>
+        <Setter Property="RestoreTooltipKey" Value="HeaderRestore"/>
+        <Setter Property="CloseTooltipKey" Value="HeaderClose"/>
+    </Style>
+
+    <Style TargetType="input:SliderInput" >
+        <Setter Property="Margin" Value="0, 5, 0, 0"/>
+        <Setter Property="TextConverter" Value="{StaticResource StringToResource}"/>
+        <Setter Property="Foreground" Value="{DynamicResource PrimaryHueLightForegroundBrush}"/>
+        <Setter Property="FontFamily" Value="{DynamicResource InputFontFamily}"/>
+        <!--<Setter Property="FontSize" Value="{DynamicResource InputFontSize}"/>-->
+    </Style>
+
+    <Style TargetType="input:RangeSliderInput" >
+        <Setter Property="Margin" Value="0, 5, 0, 0"/>
+        <Setter Property="TextConverter" Value="{StaticResource StringToResource}"/>
+        <Setter Property="Foreground" Value="{DynamicResource PrimaryHueLightForegroundBrush}"/>
+        <Setter Property="FontFamily" Value="{DynamicResource InputFontFamily}"/>
+        <!--<Setter Property="FontSize" Value="{DynamicResource InputFontSize}"/>-->
+    </Style>
+</ResourceDictionary>

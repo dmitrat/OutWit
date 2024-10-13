@@ -1,0 +1,21 @@
+~EOT Processing~
+Job:ProcessEOT(Order:eotOrder)
+{	
+	~Taking picture after delay~
+	Delay(4100)
+	{
+		Parallel()
+		{
+			Camera.UEye.Snapshot(ueye1, ueyeImage1, "HXGA1");
+			Camera.UEye.Snapshot(ueye2, ueyeImage2, "HXGA1");
+		}
+	}
+	
+	~Exporting images to matlab exchange folder~
+	Camera.UEye.Export(ueyeImage1, "C:\MatlabInterface\uEye1.png");
+	Camera.UEye.Export(ueyeImage2, "C:\MatlabInterface\uEye2.png");
+	
+	~Processing~
+	EOT.Process(ueyeImage1, ueyeImage2);
+	
+}

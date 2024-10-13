@@ -1,0 +1,78 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:po="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"
+                    xmlns:system="clr-namespace:System;assembly=System.Runtime">
+
+    <FontFamily x:Key="TitleFontFamily">Segoe UI</FontFamily>
+    <system:Double x:Key="TitleFontSize">28</system:Double>
+    <FontWeight x:Key="TitleFontWeight">Bold</FontWeight>
+
+    <FontFamily x:Key="PageTitleFontFamily">Segoe UI</FontFamily>
+    <system:Double x:Key="PageTitleFontSize">28</system:Double>
+    <FontWeight x:Key="PageTitleFontWeight">Bold</FontWeight>
+
+    <FontFamily x:Key="NavigationHeaderFontFamily">Segoe UI</FontFamily>
+    <system:Double x:Key="NavigationHeaderFontSize">24</system:Double>
+
+    <FontFamily x:Key="InputFontFamily">Segoe UI</FontFamily>
+    <system:Double x:Key="InputFontSize">24</system:Double>
+
+    <FontFamily x:Key="NavigationItemFontFamily">Segoe UI</FontFamily>
+    <system:Double x:Key="NavigationItemFontSize">16</system:Double>
+
+    <SolidColorBrush x:Key="PrimaryHueLightBrush" Color="#ff90caf9" po:Freeze="True" />
+    <SolidColorBrush x:Key="PrimaryHueLightForegroundBrush" Color="#dd000000" po:Freeze="True" />
+    <SolidColorBrush x:Key="PrimaryHueMidBrush" Color="#ff2196f3" po:Freeze="True" />
+    <SolidColorBrush x:Key="PrimaryHueMidForegroundBrush" Color="#ffffffff" po:Freeze="True" />
+    <SolidColorBrush x:Key="PrimaryHueDarkBrush" Color="#ff1976d2" po:Freeze="True" />
+    <SolidColorBrush x:Key="PrimaryHueDarkForegroundBrush" Color="#ddffffff" po:Freeze="True" />
+
+    <SolidColorBrush x:Key="SecondaryHueLightBrush" Color="#FF84FFFF" po:Freeze="True" />
+    <SolidColorBrush x:Key="SecondaryHueLightForegroundBrush" Color="#dd000000" po:Freeze="True" />
+    <SolidColorBrush x:Key="SecondaryHueMidBrush" Color="#FF00E5FF" po:Freeze="True" />
+    <SolidColorBrush x:Key="SecondaryHueMidForegroundBrush" Color="#dd000000" po:Freeze="True" />
+    <SolidColorBrush x:Key="SecondaryHueDarkBrush" Color="#FF00B8D4" po:Freeze="True" />
+    <SolidColorBrush x:Key="SecondaryHueDarkForegroundBrush" Color="#dd000000" po:Freeze="True" />
+
+    <SolidColorBrush x:Key="SecondaryAccentBrush" Color="#FF00E5FF" po:Freeze="True" />
+    <SolidColorBrush x:Key="SecondaryAccentForegroundBrush" Color="#dd000000" po:Freeze="True" />
+
+    <SolidColorBrush x:Key="ValidationErrorBrush" Color="#f44336" po:Freeze="True" />
+    <SolidColorBrush x:Key="MaterialDesignBackground" Color="#FFFFFFFF" po:Freeze="True" />
+    <SolidColorBrush x:Key="MaterialDesignPaper" Color="#FFfafafa" po:Freeze="True" />
+    <SolidColorBrush x:Key="MaterialDesignCardBackground" Color="#FFFFFFFF" po:Freeze="True" />
+    <SolidColorBrush x:Key="MaterialDesignToolBarBackground" Color="#FFF5F5F5" po:Freeze="True" />
+    <SolidColorBrush x:Key="MaterialDesignBody" Color="#DD000000" po:Freeze="True" />
+    <SolidColorBrush x:Key="MaterialDesignBodyLight" Color="#89000000" po:Freeze="True" />
+    <SolidColorBrush x:Key="MaterialDesignColumnHeader" Color="#BC000000" po:Freeze="True" />
+
+    <SolidColorBrush x:Key="MaterialDesignCheckBoxOff" Color="#89000000" po:Freeze="True" />
+    <SolidColorBrush x:Key="MaterialDesignCheckBoxDisabled" Color="#FFBDBDBD" po:Freeze="True" />
+
+    <SolidColorBrush x:Key="MaterialDesignTextBoxBorder" Color="#89000000" po:Freeze="True" />
+
+    <SolidColorBrush x:Key="MaterialDesignDivider" Color="#1F000000" po:Freeze="True" />
+    <SolidColorBrush x:Key="MaterialDesignSelection" Color="#FFDeDeDe" po:Freeze="True" />
+
+    <SolidColorBrush x:Key="MaterialDesignDataGridRowHoverBackground" Color="#0A000000" po:Freeze="True" />
+
+    <SolidColorBrush x:Key="MaterialDesignToolForeground" Color="#616161" po:Freeze="true" />
+    <SolidColorBrush x:Key="MaterialDesignToolBackground" Color="#e0e0e0" po:Freeze="true" />
+
+    <SolidColorBrush x:Key="MaterialDesignFlatButtonClick" Color="#FFDeDeDe" po:Freeze="True" />
+    <SolidColorBrush x:Key="MaterialDesignFlatButtonRipple" Color="#FFB6B6B6" po:Freeze="True" />
+
+    <SolidColorBrush x:Key="MaterialDesignToolTipBackground" Color="#757575" po:Freeze="True" />
+    <SolidColorBrush x:Key="MaterialDesignChipBackground" Color="#12000000" po:Freeze="True" />
+
+    <SolidColorBrush x:Key="MaterialDesignSnackbarBackground" Color="#FF323232" po:Freeze="True" />
+    <SolidColorBrush x:Key="MaterialDesignSnackbarMouseOver" Color="#FF464642" po:Freeze="True" />
+    <SolidColorBrush x:Key="MaterialDesignSnackbarRipple" Color="#FFB6B6B6" po:Freeze="True" />
+
+    <SolidColorBrush x:Key="MaterialDesignTextFieldBoxBackground" Color="#0F000000" po:Freeze="True" />
+    <SolidColorBrush x:Key="MaterialDesignTextFieldBoxHoverBackground" Color="#14000000" po:Freeze="True" />
+    <SolidColorBrush x:Key="MaterialDesignTextFieldBoxDisabledBackground" Color="#08000000" po:Freeze="True" />
+    <SolidColorBrush x:Key="MaterialDesignTextAreaBorder" Color="#BC000000" po:Freeze="True" />
+    <SolidColorBrush x:Key="MaterialDesignTextAreaInactiveBorder" Color="#0F000000" po:Freeze="True" />
+
+</ResourceDictionary>

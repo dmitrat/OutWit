@@ -1,0 +1,23 @@
+~Session initialization for EOT~
+Job:InitUEyeAndZedCamera()
+{
+	~Variables~
+	Int:ueye1; Int:ueye2;
+	
+	Image: ueyeImage1; Image: ueyeImage2;
+	
+	~Initializing cameras in parallel threads~
+	Parallel()
+	{
+		Sequence()
+		{
+			ueye1 = Camera.UEye.Init(1);
+			ueyeImage1 = Camera.UEye.Allocate(ueye1, "HXGA1");
+		}
+		Sequence()
+		{
+			ueye2 = Camera.UEye.Init(2);
+			ueyeImage2 = Camera.UEye.Allocate(ueye2, "HXGA1");
+		}
+	}
+}

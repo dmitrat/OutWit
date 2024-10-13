@@ -1,0 +1,7 @@
+~Turntable initialization of first power on~
+Job:TurntableInit()
+{
+	Turntable.Stop();
+	Turntable.Mute(true);
+	Turntable.Restore();
+}
