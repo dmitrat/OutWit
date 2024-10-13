@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OutWit.Common.MessagePack.N
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OutWit.Common.Services.NuGet", "Common\OutWit.Common.Services\OutWit.Common.Services.NuGet.csproj", "{A0F51B17-06B0-4823-AFB6-4414E63343DA}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OutWit.Common.MVVM.NuGet", "Common\OutWit.Common.MVVM\OutWit.Common.MVVM.NuGet.csproj", "{849B87C5-BDE1-422C-8DB9-CBD283AA783B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{A0F51B17-06B0-4823-AFB6-4414E63343DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0F51B17-06B0-4823-AFB6-4414E63343DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0F51B17-06B0-4823-AFB6-4414E63343DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{849B87C5-BDE1-422C-8DB9-CBD283AA783B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{849B87C5-BDE1-422C-8DB9-CBD283AA783B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{849B87C5-BDE1-422C-8DB9-CBD283AA783B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{849B87C5-BDE1-422C-8DB9-CBD283AA783B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
