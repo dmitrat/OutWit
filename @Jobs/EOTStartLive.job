@@ -1,5 +1,0 @@
-~Restoring initial state on IDG processing error~
-Job:EOTStartLive()
-{	
-	Camera.UEye.StartLive(live);
-}

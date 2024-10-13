@@ -1,9 +1,0 @@
-~Acquisition of last web camera live video frame~
-Job:EOTTakePicture(String:id, String:suffix)
-{		
-	Camera.UEye.Snapshot(image);	
-	
-	String:imagePath = ConcatString(#WorkFolder#, "\", id, "\", "Image", suffix, ".png");
-	Camera.UEye.Export(image, imagePath);
-		
-}

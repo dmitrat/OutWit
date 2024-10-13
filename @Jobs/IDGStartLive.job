@@ -1,6 +1,0 @@
-~Restoring initial state on IDG processing error~
-Job:IDGStartLive()
-{	
-	Camera.UEye.SetExposure(ueye1, #ExposureImage#);
-	Camera.UEye.StartLive(live);
-}

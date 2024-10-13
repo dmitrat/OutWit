@@ -1,5 +1,0 @@
-~Session closing for IDG~
-Job:EOTSessionClose()
-{	
-	Camera.UEye.Dispose();
-}
