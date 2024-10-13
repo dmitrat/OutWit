@@ -19,6 +19,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OutWit.Common.MEF.NuGet", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OutWit.Common.Prism.NuGet", "Common\OutWit.Common.Prism\OutWit.Common.Prism.NuGet.csproj", "{C2057AE6-1432-4B1A-A814-044D6FA03B5A}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OutWit.Common.Settings.NuGet", "Common\OutWit.Common.Settings\OutWit.Common.Settings.NuGet.csproj", "{456A460F-5E8C-41A4-9D81-D54CB5FD290A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{C2057AE6-1432-4B1A-A814-044D6FA03B5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2057AE6-1432-4B1A-A814-044D6FA03B5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2057AE6-1432-4B1A-A814-044D6FA03B5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{456A460F-5E8C-41A4-9D81-D54CB5FD290A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{456A460F-5E8C-41A4-9D81-D54CB5FD290A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{456A460F-5E8C-41A4-9D81-D54CB5FD290A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{456A460F-5E8C-41A4-9D81-D54CB5FD290A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
