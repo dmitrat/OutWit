@@ -1,0 +1,6 @@
+~Session closing for IDG~
+Job:DisposeUEyeAndZedCamera()
+{	
+	Camera.UEye.Dispose();
+	Camera.Zed.Dispose();
+}

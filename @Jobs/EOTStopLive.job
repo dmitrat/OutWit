@@ -1,0 +1,5 @@
+~Disabling web camera live video~
+Job:EOTStopLive()
+{	
+	Camera.UEye.StopLive(ueye1);
+}

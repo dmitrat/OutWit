@@ -1,0 +1,45 @@
+~Acquisition of last web camera live video frame~
+Job:EOTProcessingSingleTote(String:id, WMOrder:order)
+{			
+	Camera.UEye.Snapshot(image);
+
+	String:name = UniqueName();
+	String:imageName = ConcatString(name, ".png");
+	
+	String:imageFile = Path(#WorkFolder#, id, imageName);
+	
+	Camera.UEye.Export(image, imageFile);
+	
+	
+	~--------------------Just for test mode--------------------~
+	~Copy mock image~
+	Copy("D:\Temp\Mock\636751874397212717.png", imageFile);
+	~Replace real image to mock image~
+	Camera.UEye.LoadBitmap(image, imageFile);
+	~----------------------------------------------------------~
+	
+	EOT.Initialize();
+	
+	EOT.AddTote(imageFile);
+	
+	EOT.AddOrder(order);
+	
+	~--------------------Just for test mode--------------------~
+
+	~Exporting order image~
+	String:debugImageFile = Path("D:\EotData", id, imageName);
+	Copy(imageFile, debugImageFile);
+	
+	~Exporting order data~
+	String:dataName = ConcatString(name, ".txt");
+	String:debugDataFile = Path("D:\EotData", id, dataName);
+	EOT.ExportTask(debugDataFile);
+	~----------------------------------------------------------~	
+	
+	WMInspection:inspection = EOT.Process();
+	
+	EOT.Dispose();
+	
+	Return(image, inspection);
+		
+}

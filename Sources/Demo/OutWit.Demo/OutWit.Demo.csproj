@@ -1,0 +1,62 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+	<UseWPF>true</UseWPF>
+	<ApplicationIcon>OutWitIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="SplashScreen.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="OutWitIcon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Prism.Unity" Version="9.0.537" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\OutWit.Common.Controls.HighlightTextBox\OutWit.Common.Controls.HighlightTextBox.csproj" />
+    <ProjectReference Include="..\..\Common\OutWit.Common.Controls\OutWit.Common.Controls.csproj" />
+    <ProjectReference Include="..\..\Common\OutWit.Common.Logging\OutWit.Common.Logging.csproj" />
+    <ProjectReference Include="..\..\Common\OutWit.Common.MEF\OutWit.Common.MEF.csproj" />
+    <ProjectReference Include="..\..\Common\OutWit.Common.MessagePack\OutWit.Common.MessagePack.csproj" />
+    <ProjectReference Include="..\..\Common\OutWit.Common.Prism\OutWit.Common.Prism.csproj" />
+    <ProjectReference Include="..\..\Common\OutWit.Common.Settings.Controls\OutWit.Common.Settings.Controls.csproj" />
+    <ProjectReference Include="..\..\Engine\OutWit.Engine\OutWit.Engine.csproj" />
+    <ProjectReference Include="..\..\Themes\OutWit.Themes\OutWit.Themes.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="SplashScreen.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Utils\" />
+    <Folder Include="ViewModels\" />
+  </ItemGroup>
+
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="echo D|xcopy &quot;$(SolutionDir)@Themes\$(Configuration)&quot; &quot;$(TargetDir)@Themes&quot; /Y/S&#xD;&#xA;echo D|xcopy &quot;$(SolutionDir)@Controllers\$(Configuration)&quot; &quot;$(TargetDir)@Controllers&quot; /Y/S&#xD;&#xA;echo D|xcopy &quot;$(SolutionDir)@Modules\$(Configuration)&quot; &quot;$(TargetDir)@Modules&quot; /Y/S" />
+  </Target>
+
+</Project>
