@@ -1,0 +1,49 @@
+<package>
+  <metadata>
+    <id>OutWit.OneHourAppStore.Loader</id>
+    <version>1.0.9</version>
+    <authors>Dmitry Ratner</authors>
+    <owners>OutWit</owners>
+    <license type="file">LICENSE</license>
+    <icon>icon\OutWitIcon.png</icon>
+	<title>OutWit OneHourAppStore Loader</title>
+    <projectUrl>https://github.com/dmitrat/OutWit/tree/main/Sources/OneHourAppStore/OutWit.OneHourAppStore.Loader</projectUrl>
+    <repository type="git" url="https://github.com/dmitrat/OutWit/tree/main/Sources/OneHourAppStore/OutWit.OneHourAppStore.Loader" />
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>A tool to override running process and load executable from resource</description>
+    <releaseNotes>Initial release with support for .NET 5, 6, 7, and 8.</releaseNotes>
+    <tags>OutWit;OneHourAppStore;Loader</tags>
+	<copyright>Copyright © Dmitry Ratner 2024</copyright>
+    <dependencies>
+      <group targetFramework=".NET5.0-windows7.0">
+        <dependency id="OutWit.Common" version="1.0.2" />
+      </group>
+      <group targetFramework=".NET6.0-windows7.0">
+        <dependency id="OutWit.Common" version="1.0.2" />
+      </group>
+      <group targetFramework=".NET7.0-windows7.0">
+        <dependency id="OutWit.Common" version="1.0.2" />
+      </group>
+      <group targetFramework=".NET8.0-windows7.0">
+        <dependency id="OutWit.Common" version="1.0.2" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+     <file src="C:\Workspace\OutWit\Sources\OneHourAppStore\OutWit.OneHourAppStore.Loader\OutWit.OneHourAppStore.Loader.props" target="build\OutWit.OneHourAppStore.Loader.props" />
+	 
+    <!-- Include compiled binaries for each framework and platform -->
+    <file src="C:\Workspace\OutWit\Sources\@Native\Loader\v5.0\x86\*.*" target="lib\net5.0-windows\x86\" />
+    <file src="C:\Workspace\OutWit\Sources\@Native\Loader\v5.0\x64\*.*" target="lib\net5.0-windows\x64\" />
+    <file src="C:\Workspace\OutWit\Sources\@Native\Loader\v6.0\x86\*.*" target="lib\net6.0-windows\x86\" />
+    <file src="C:\Workspace\OutWit\Sources\@Native\Loader\v6.0\x64\*.*" target="lib\net6.0-windows\x64\" />
+    <file src="C:\Workspace\OutWit\Sources\@Native\Loader\v7.0\x86\*.*" target="lib\net7.0-windows\x86\" />
+    <file src="C:\Workspace\OutWit\Sources\@Native\Loader\v7.0\x64\*.*" target="lib\net7.0-windows\x64\" />
+    <file src="C:\Workspace\OutWit\Sources\@Native\Loader\v8.0\x86\*.*" target="lib\net8.0-windows\x86\" />
+    <file src="C:\Workspace\OutWit\Sources\@Native\Loader\v8.0\x64\*.*" target="lib\net8.0-windows\x64\" />
+
+    <!-- Include additional resources -->
+    <file src="C:\Workspace\OutWit\@Images\OutWitIcon.png" target="icon" />
+    <file src="C:\Workspace\OutWit\Sources\OneHourAppStore\OutWit.OneHourAppStore.Loader\LICENSE" target="LICENSE" />
+  </files>
+</package>
