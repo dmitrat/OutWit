@@ -1,7 +1,7 @@
 <package>
   <metadata>
     <id>OutWit.OneHourAppStore.Loader</id>
-    <version>1.0.9</version>
+    <version>1.0.12</version>
     <authors>Dmitry Ratner</authors>
     <owners>OutWit</owners>
     <license type="file">LICENSE</license>

@@ -1,80 +1,89 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <!-- net8.0-windows -->
-  <ItemGroup Condition="'$(TargetFramework)' == 'net8.0-windows'">
+  
+  <PropertyGroup>
+    <PlatformTarget Condition="'$(PlatformTarget)' == ''">$(Platform)</PlatformTarget>
+  </PropertyGroup>
+  
+   <!-- net8.0-windows -->
+  <ItemGroup Condition="'$(TargetFramework)' == 'net8.0-windows' AND '$(PlatformTarget)' == 'x86'">
     <Reference Include="OutWit.OneHourAppStore.Loader">
       <HintPath>$(MSBuildThisFileDirectory)..\lib\net8.0-windows\x86\OutWit.OneHourAppStore.Loader.dll</HintPath>
       <Private>True</Private>
-      <Condition>'$(Platform)' == 'x86'</Condition>
     </Reference>
+    <Content Include="$(MSBuildThisFileDirectory)..\lib\net8.0-windows\x86\Ijwhost.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net8.0-windows' AND '$(PlatformTarget)' == 'x64'">
     <Reference Include="OutWit.OneHourAppStore.Loader">
       <HintPath>$(MSBuildThisFileDirectory)..\lib\net8.0-windows\x64\OutWit.OneHourAppStore.Loader.dll</HintPath>
       <Private>True</Private>
-      <Condition>'$(Platform)' == 'x64'</Condition>
     </Reference>
-	<Content Include="$(MSBuildThisFileDirectory)..\lib\net8.0-windows\x86\Ijwhost.dll" Condition="'$(Platform)' == 'x86'">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="$(MSBuildThisFileDirectory)..\lib\net8.0-windows\x64\Ijwhost.dll" Condition="'$(Platform)' == 'x64'">
+    <Content Include="$(MSBuildThisFileDirectory)..\lib\net8.0-windows\x64\Ijwhost.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
 
   <!-- net7.0-windows -->
-  <ItemGroup Condition="'$(TargetFramework)' == 'net7.0-windows'">
+  <ItemGroup Condition="'$(TargetFramework)' == 'net7.0-windows' AND '$(PlatformTarget)' == 'x86'">
     <Reference Include="OutWit.OneHourAppStore.Loader">
       <HintPath>$(MSBuildThisFileDirectory)..\lib\net7.0-windows\x86\OutWit.OneHourAppStore.Loader.dll</HintPath>
       <Private>True</Private>
-      <Condition>'$(Platform)' == 'x86'</Condition>
     </Reference>
+    <Content Include="$(MSBuildThisFileDirectory)..\lib\net7.0-windows\x86\Ijwhost.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net7.0-windows' AND '$(PlatformTarget)' == 'x64'">
     <Reference Include="OutWit.OneHourAppStore.Loader">
       <HintPath>$(MSBuildThisFileDirectory)..\lib\net7.0-windows\x64\OutWit.OneHourAppStore.Loader.dll</HintPath>
       <Private>True</Private>
-      <Condition>'$(Platform)' == 'x64'</Condition>
     </Reference>
-	<Content Include="$(MSBuildThisFileDirectory)..\lib\net7.0-windows\x86\Ijwhost.dll" Condition="'$(Platform)' == 'x86'">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="$(MSBuildThisFileDirectory)..\lib\net7.0-windows\x64\Ijwhost.dll" Condition="'$(Platform)' == 'x64'">
+    <Content Include="$(MSBuildThisFileDirectory)..\lib\net7.0-windows\x64\Ijwhost.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   
   <!-- net6.0-windows -->
-  <ItemGroup Condition="'$(TargetFramework)' == 'net6.0-windows'">
+  <ItemGroup Condition="'$(TargetFramework)' == 'net6.0-windows' AND '$(PlatformTarget)' == 'x86'">
     <Reference Include="OutWit.OneHourAppStore.Loader">
       <HintPath>$(MSBuildThisFileDirectory)..\lib\net6.0-windows\x86\OutWit.OneHourAppStore.Loader.dll</HintPath>
       <Private>True</Private>
-      <Condition>'$(Platform)' == 'x86'</Condition>
     </Reference>
+    <Content Include="$(MSBuildThisFileDirectory)..\lib\net6.0-windows\x86\Ijwhost.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net6.0-windows' AND '$(PlatformTarget)' == 'x64'">
     <Reference Include="OutWit.OneHourAppStore.Loader">
       <HintPath>$(MSBuildThisFileDirectory)..\lib\net6.0-windows\x64\OutWit.OneHourAppStore.Loader.dll</HintPath>
       <Private>True</Private>
-      <Condition>'$(Platform)' == 'x64'</Condition>
     </Reference>
-	<Content Include="$(MSBuildThisFileDirectory)..\lib\net6.0-windows\x86\Ijwhost.dll" Condition="'$(Platform)' == 'x86'">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="$(MSBuildThisFileDirectory)..\lib\net6.0-windows\x64\Ijwhost.dll" Condition="'$(Platform)' == 'x64'">
+    <Content Include="$(MSBuildThisFileDirectory)..\lib\net6.0-windows\x64\Ijwhost.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   
   <!-- net5.0-windows -->
-  <ItemGroup Condition="'$(TargetFramework)' == 'net5.0-windows'">
+  <ItemGroup Condition="'$(TargetFramework)' == 'net5.0-windows' AND '$(PlatformTarget)' == 'x86'">
     <Reference Include="OutWit.OneHourAppStore.Loader">
       <HintPath>$(MSBuildThisFileDirectory)..\lib\net5.0-windows\x86\OutWit.OneHourAppStore.Loader.dll</HintPath>
       <Private>True</Private>
-      <Condition>'$(Platform)' == 'x86'</Condition>
     </Reference>
+    <Content Include="$(MSBuildThisFileDirectory)..\lib\net5.0-windows\x86\Ijwhost.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net5.0-windows' AND '$(PlatformTarget)' == 'x64'">
     <Reference Include="OutWit.OneHourAppStore.Loader">
       <HintPath>$(MSBuildThisFileDirectory)..\lib\net5.0-windows\x64\OutWit.OneHourAppStore.Loader.dll</HintPath>
       <Private>True</Private>
-      <Condition>'$(Platform)' == 'x64'</Condition>
     </Reference>
-	<Content Include="$(MSBuildThisFileDirectory)..\lib\net5.0-windows\x86\Ijwhost.dll" Condition="'$(Platform)' == 'x86'">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="$(MSBuildThisFileDirectory)..\lib\net5.0-windows\x64\Ijwhost.dll" Condition="'$(Platform)' == 'x64'">
+    <Content Include="$(MSBuildThisFileDirectory)..\lib\net5.0-windows\x64\Ijwhost.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
