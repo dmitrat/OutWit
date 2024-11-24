@@ -4,6 +4,27 @@
     <PlatformTarget Condition="'$(PlatformTarget)' == ''">$(Platform)</PlatformTarget>
   </PropertyGroup>
   
+  <!-- net9.0-windows -->
+  <ItemGroup Condition="'$(TargetFramework)' == 'net9.0-windows' AND '$(PlatformTarget)' == 'x86'">
+    <Reference Include="OutWit.OneHourAppStore.Loader">
+      <HintPath>$(MSBuildThisFileDirectory)..\lib\net9.0-windows\x86\OutWit.OneHourAppStore.Loader.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Content Include="$(MSBuildThisFileDirectory)..\lib\net9.0-windows\x86\Ijwhost.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net9.0-windows' AND '$(PlatformTarget)' == 'x64'">
+    <Reference Include="OutWit.OneHourAppStore.Loader">
+      <HintPath>$(MSBuildThisFileDirectory)..\lib\net9.0-windows\x64\OutWit.OneHourAppStore.Loader.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Content Include="$(MSBuildThisFileDirectory)..\lib\net9.0-windows\x64\Ijwhost.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  
    <!-- net8.0-windows -->
   <ItemGroup Condition="'$(TargetFramework)' == 'net8.0-windows' AND '$(PlatformTarget)' == 'x86'">
     <Reference Include="OutWit.OneHourAppStore.Loader">
