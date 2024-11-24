@@ -65,6 +65,11 @@
     <Folder Include="Fonts\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="MessagePack" Version="2.5.192" />
+    <PackageReference Include="Serilog" Version="4.1.0" />
+  </ItemGroup>
+
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
     <Exec Command="echo D|xcopy &quot;$(TargetDir)*$(TargetName).resources.dll&quot; &quot;$(SolutionDir)@Modules\$(Configuration)\witengine.module\&quot; /Y/S&#xD;&#xA;echo D|xcopy &quot;$(TargetDir)$(TargetName).dll&quot; &quot;$(SolutionDir)@Modules\$(Configuration)\witengine.module\&quot; /Y/S&#xD;&#xA;echo D|xcopy &quot;$(TargetDir)$(TargetName).dll.config&quot; &quot;$(SolutionDir)@Modules\$(Configuration)\witengine.module\&quot; /Y/S&#xD;&#xA;echo D|xcopy &quot;$(TargetDir)$(TargetName).deps.json&quot; &quot;$(SolutionDir)@Modules\$(Configuration)\witengine.module\&quot; /Y/S" />
   </Target>

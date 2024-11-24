@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MessagePack" Version="2.5.192" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\Common\OutWit.Common.MessagePack\OutWit.Common.MessagePack.csproj" />
     <ProjectReference Include="..\OutWit.Engine.Interfaces\OutWit.Engine.Interfaces.csproj" />
   </ItemGroup>
