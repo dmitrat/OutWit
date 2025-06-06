@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 using OutWit.Common.Aspects;
-using OutWit.Common.Aspects.Utils;
 using OutWit.Common.Logging.Aspects;
 using OutWit.Common.MVVM.ViewModels;
+using OutWit.Common.Utils;
 using OutWit.Themes.Interfaces;
 using OutWit.Themes.Utils;
 

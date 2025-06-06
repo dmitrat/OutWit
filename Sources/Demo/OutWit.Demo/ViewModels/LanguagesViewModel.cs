@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using Microsoft.Win32;
 using OutWit.Common.Aspects;
-using OutWit.Common.Aspects.Utils;
 using OutWit.Common.Logging.Aspects;
 using OutWit.Common.MVVM.Commands;
 using OutWit.Common.MVVM.ViewModels;
 using OutWit.Common.Settings.Interfaces;
 using OutWit.Common.Settings.Values;
+using OutWit.Common.Utils;
 
 namespace OutWit.Demo.ViewModels
 {

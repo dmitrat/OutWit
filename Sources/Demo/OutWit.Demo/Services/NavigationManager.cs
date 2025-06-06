@@ -2,9 +2,9 @@
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
-using OutWit.Common.Aspects.Utils;
 using OutWit.Common.Prism;
 using OutWit.Common.Prism.Interfaces;
+using OutWit.Common.Utils;
 using Prism.Navigation;
 using Prism.Navigation.Regions;
 using Unity;

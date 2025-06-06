@@ -8,8 +8,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using OutWit.Common.Aspects.Utils;
+using OutWit.Common.Utils;
 
 namespace OutWit.Demo.WitEngine.ViewModels
 {
