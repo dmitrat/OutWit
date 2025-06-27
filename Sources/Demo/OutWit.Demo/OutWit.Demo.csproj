@@ -25,7 +25,6 @@
     <ProjectReference Include="..\..\Common\OutWit.Common.Controls\OutWit.Common.Controls.csproj" />
     <ProjectReference Include="..\..\Common\OutWit.Common.Logging\OutWit.Common.Logging.csproj" />
     <ProjectReference Include="..\..\Common\OutWit.Common.MEF\OutWit.Common.MEF.csproj" />
-    <ProjectReference Include="..\..\Common\OutWit.Common.MessagePack\OutWit.Common.MessagePack.csproj" />
     <ProjectReference Include="..\..\Common\OutWit.Common.Prism\OutWit.Common.Prism.csproj" />
     <ProjectReference Include="..\..\Common\OutWit.Common.Settings.Controls\OutWit.Common.Settings.Controls.csproj" />
     <ProjectReference Include="..\..\Engine\OutWit.Engine\OutWit.Engine.csproj" />

@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Common\OutWit.Common.MessagePack\OutWit.Common.MessagePack.csproj" />
+    <ProjectReference Include="..\..\Common\OutWit.Common.Aspects\OutWit.Common.Aspects.csproj" />
     <ProjectReference Include="..\OutWit.Engine.Interfaces\OutWit.Engine.Interfaces.csproj" />
   </ItemGroup>
 
